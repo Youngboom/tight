@@ -22,4 +22,5 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - ./deploy/*
+    - ./deploy*/**
+  discard-paths: yes
