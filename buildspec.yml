@@ -15,11 +15,11 @@ phases:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
-      - core/deploy.sh
+      - ./deploy.sh
   post_build:
     commands:
       - echo Entered the post_build phase...
       - echo Build completed on `date`
 artifacts:
   files:
-    - core/deploy
+    - ./deploy/*
