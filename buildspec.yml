@@ -4,8 +4,10 @@ phases:
   install:
     commands:
       - echo Entered the install phase...
+      - curl -L -o sbt.deb http://dl.bintray.com/sbt/debian/sbt-0.13.15.deb
+      - dpkg -i sbt.deb
       - apt-get update -y
-      - apt-get install -y sbt
+      - apt-get install sbt
   pre_build:
     commands:
       - echo Entered the pre_build phase...
