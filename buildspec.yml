@@ -15,12 +15,13 @@ phases:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
-      - sbt dist
+      - ./deploy.sh
   post_build:
     commands:
       - echo Entered the post_build phase...
       - echo Build completed on `date`
 artifacts:
   files:
-    - ./target/universal/tight-1.0.zip
+    - '**/*'
+  base-directory: 'deploy*'
   discard-paths: yes
